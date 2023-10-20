@@ -20,7 +20,7 @@
 }
 
 .cont {
-  width: clamp(18.75rem, -0.8152rem + 97.8261vw, 75rem);
+  width: clamp(450px - 1rem, 75%, 1200px);
   margin: 2rem auto;
 }
 
