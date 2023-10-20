@@ -1,11 +1,12 @@
-<div class="container my-5 pt-5 vh-100">
-  <!-- class="row row-cols-xs-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-3 row-cols-xl-3 mt-5" -->
+<div class="container my-5 pt-5 min-vh-100">
   <!-- Cart starts -->
 
   <div class="row row-cols-1 row-cols-lg-3">
     <div class="col-lg-8">
       <div class="card mt-4">
         <div class="card-header fw-bold">Cart - 2 Item(s)</div>
+
+        <!-- Dynamic cart item starts -->
         <div class="m-3 pb-3 border-bottom">
           <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
             <img
@@ -23,9 +24,11 @@
             <p class="col-sm-4 col-md-3 fw-bold">Price: &euro; 31.00</p>
           </div>
         </div>
+        <!-- Dynamic cart item ends -->
       </div>
     </div>
     <!-- Cart starts -->
+
     <!-- Summary starts -->
     <div class="col-lg-4">
       <div class="card mt-4">
@@ -57,6 +60,36 @@
       </div>
     </div>
   </div>
-
   <!-- Summary ends -->
+
+  <!-- Order form starts -->
+  <h1 class="primary mt-4">Order Form</h1>
+  <p class="resp-text border-bottom">
+    Please fill up the info for the delivery
+  </p>
+  <form>
+    <div class="mb-3">
+      <label for="exampleInputName" class="form-label">Name</label>
+      <input type="text" class="form-control" id="exampleInputName" />
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputAddress" class="form-label">Address</label>
+      <input type="text" class="form-control" id="exampleInputAddress" />
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Email address</label>
+      <input
+        type="email"
+        class="form-control"
+        id="exampleInputEmail1"
+        aria-describedby="emailHelp"
+      />
+      <div id="emailHelp" class="form-text">
+        We'll never share your email with anyone else.
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Purchase</button>
+  </form>
+  <!-- Order form ends -->
 </div>
