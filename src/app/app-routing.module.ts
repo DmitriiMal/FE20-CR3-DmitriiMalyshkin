@@ -20,7 +20,7 @@ const routes: Routes = [
     component: MenuComponent,
   },
   {
-    path: 'details',
+    path: 'detail/:id',
     component: DetailsComponent,
   },
   {

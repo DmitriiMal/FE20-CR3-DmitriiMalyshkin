@@ -1,1 +1,25 @@
-<p>details works!</p>
+<div class="cont mt-5">
+  <div class="my-4">
+    <div class="card">
+      <img src="{{ product.image }}" class="card-img-top" alt="..." />
+      <div class="card-body">
+        <h5 class="card-title">{{ product.name }}</h5>
+        <p *ngIf="product.description" class="card-text">
+          {{ product.description }}
+        </p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li *ngIf="product.specificInformation" class="list-group-item">
+          {{ product.specificInformation }}
+        </li>
+        <li class="list-group-item">&euro; {{ product.price }}</li>
+      </ul>
+      <div class="card-body">
+        <a routerLink="#" class="btn btn-success px-4 btn-sm me-3">Order</a>
+        <a routerLink="/menu" class="btn btn-secondary px-2 btn-sm"
+          >Back to menu</a
+        >
+      </div>
+    </div>
+  </div>
+</div>

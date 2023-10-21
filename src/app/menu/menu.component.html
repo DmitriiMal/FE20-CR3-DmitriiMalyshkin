@@ -4,7 +4,7 @@
     class="row row-cols-xs-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-3 row-cols-xl-3 border-top pt-5"
   >
     <!-- Card starts -->
-    <div *ngFor="let product of products" class="mb-4">
+    <div *ngFor="let product of products; index as i" class="mb-4">
       <div class="card h-100">
         <img src="{{ product.image }}" class="card-img-top" alt="..." />
         <div class="card-body">
@@ -18,10 +18,12 @@
         </ul>
         <div class="card-body">
           <div *ngIf="product.availability == true; else elseBlock">
-            <a routerLink="#" class="btn btn-primary px-4 btn-sm me-3"
+            <a
+              routerLink="/detail/{{ i }}"
+              class="btn btn-primary px-4 btn-sm me-3"
               >Details</a
             >
-            <a routerLink="#" class="btn btn-success px-4 btn-sm">Order</a>
+            <a routerLink="/" class="btn btn-success px-4 btn-sm">Order</a>
           </div>
           <ng-template #elseBlock>
             <p class="text-danger">This product is not available</p>
