@@ -17,11 +17,25 @@ export class CartService {
     return this.cart;
   }
 
-  calcTotal() {
-    let total: number = 0;
+  calcSum() {
+    let sum: number = 0;
     this.cart.forEach((val) => {
-      total += val.price;
+      sum += val.price;
     });
+    return sum;
+  }
+
+  defineDiscount(sum: number, discount: number) {
+    if (sum >= 40) {
+      discount = 10;
+    } else {
+      discount = 0;
+    }
+    return discount;
+  }
+
+  calcTotal(sum: number, discount: number, total: number) {
+    total = sum - (sum * discount) / 100;
     return total;
   }
 }
