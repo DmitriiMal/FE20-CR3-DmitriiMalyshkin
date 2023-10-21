@@ -23,7 +23,9 @@
               class="btn btn-primary px-4 btn-sm me-3"
               >Details</a
             >
-            <a routerLink="/" class="btn btn-success px-4 btn-sm">Order</a>
+            <a (click)="addToCart(product)" class="btn btn-success px-4 btn-sm"
+              >Order</a
+            >
           </div>
           <ng-template #elseBlock>
             <p class="text-danger">This product is not available</p>

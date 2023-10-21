@@ -13,8 +13,9 @@ export class MenuComponent {
   product: Iproducts = {} as Iproducts;
 
   constructor(private CS: CartService) {}
-  addToCart() {
+
+  addToCart(product: Iproducts) {
+    this.CS.addToCart(product);
     alert('Product added to the cart');
-    this.CS.addToCart(this.product);
   }
 }
