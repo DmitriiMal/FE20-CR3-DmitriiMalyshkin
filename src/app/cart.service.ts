@@ -19,5 +19,9 @@ export class CartService {
 
   calcTotal() {
     let total: number = 0;
+    this.cart.forEach((val) => {
+      total += val.price;
+    });
+    return total;
   }
 }

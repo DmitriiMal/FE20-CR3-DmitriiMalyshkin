@@ -15,7 +15,9 @@
         <li class="list-group-item">&euro; {{ product.price }}</li>
       </ul>
       <div class="card-body">
-        <a routerLink="#" class="btn btn-success px-4 btn-sm me-3">Order</a>
+        <a (click)="addToCart()" class="btn btn-success px-4 btn-sm me-3"
+          >Order</a
+        >
         <a routerLink="/menu" class="btn btn-secondary px-2 btn-sm"
           >Back to menu</a
         >
