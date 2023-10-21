@@ -19,7 +19,7 @@ export const products = [
     specificInformation:
       'Our Pasta Carbonara is a Roman specialty. We use guanciale, a cured meat from pork jowl, to give it an authentic taste. The sauce is made with eggs, Pecorino Romano cheese, and freshly ground black pepper.',
     price: 12.49,
-    availability: true,
+    availability: false,
   },
   {
     name: 'Risotto ai Frutti di Mare',
@@ -63,7 +63,7 @@ export const products = [
     specificInformation:
       'Experience the perfect balance of flavors in our Prosciutto e Rucola Panini. We use high-quality prosciutto, paired with fresh arugula and creamy mozzarella. The panini is grilled to perfection, and a drizzle of aged balsamic glaze enhances its taste.',
     price: 10.99,
-    availability: true,
+    availability: false,
   },
   {
     name: 'Caprese Salad',

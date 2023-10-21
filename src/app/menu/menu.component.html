@@ -17,9 +17,15 @@
           <li class="list-group-item">&euro; {{ product.price }}</li>
         </ul>
         <div class="card-body">
-          <a routerLink="#" class="btn btn-primary px-4 btn-sm me-3">Details</a>
-          <a routerLink="#" class="btn btn-success px-4 btn-sm">Order</a>
-          <!-- <p class="text-danger">This product is not available</p> -->
+          <div *ngIf="product.availability == true; else elseBlock">
+            <a routerLink="#" class="btn btn-primary px-4 btn-sm me-3"
+              >Details</a
+            >
+            <a routerLink="#" class="btn btn-success px-4 btn-sm">Order</a>
+          </div>
+          <ng-template #elseBlock>
+            <p class="text-danger">This product is not available</p>
+          </ng-template>
         </div>
       </div>
     </div>
