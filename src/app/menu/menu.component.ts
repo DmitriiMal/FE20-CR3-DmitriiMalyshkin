@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Iproducts } from '../Iproducts';
 import { products } from '../products';
+import { CartService } from '../cart.service';
 
 @Component({
   selector: 'menu',
@@ -9,4 +10,11 @@ import { products } from '../products';
 })
 export class MenuComponent {
   products: Iproducts[] = products;
+  product: Iproducts = {} as Iproducts;
+
+  constructor(private CS: CartService) {}
+  addToCart() {
+    alert('Product added to the cart');
+    this.CS.addToCart(this.product);
+  }
 }
