@@ -47,6 +47,9 @@
               <p>{{ discount }} %</p>
             </div>
           </div>
+          <p *ngIf="discount == 0" class="text-danger m-0 fw-lighter">
+            Order over &euro;40 and get your discount
+          </p>
         </div>
         <div class="m-3">
           <div

@@ -26,7 +26,7 @@ export class CartService {
   }
 
   defineDiscount(sum: number, discount: number) {
-    if (sum >= 40) {
+    if (sum > 40) {
       discount = 15;
     } else {
       discount = 0;
